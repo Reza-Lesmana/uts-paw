@@ -1,10 +1,84 @@
 [
+{
+  "id": "1",
+  "judul": "Pantai Mutun",
+  "kategori": "Pantai",
+  "kabupaten": "Pesawaran",
+  "hargaTiket": 25000,
+  "jamBuka": "08.00-18.00"
+},
   {
-    "id": "1",
-    "judul": "Contoh item pertama",
-    "kategori": "Contoh",
-    "fieldTema1": "ganti sesuai field tema",
-    "fieldTema2": 0,
-    "fieldTema3": "ganti sesuai field tema"
+    "id": "2",
+    "judul": "Pantai Gigi Hiu",
+    "kategori": "Pantai",
+    "kabupaten": "Tanggamus",
+    "hargaTiket": 20000,
+    "jamBuka": "09.00-17.00"
+  },
+  {
+    "id": "3",
+    "judul": "Air Terjun Way Lalaan",
+    "kategori": "Air Terjun",
+    "kabupaten": "Tanggamus",
+    "hargaTiket": 10000,
+    "jamBuka": "09.00-17.00"
+  },
+  {
+    "id": "4",
+    "judul": "Rio by the Beach",
+    "kategori": "Pantai",
+    "kabupaten": "Lampung Selatan",
+    "hargaTiket": 40000,
+    "jamBuka": "07.00-20.00"
+  },
+  {
+    "id": "5",
+    "judul": "Navara City Park",
+    "kategori": "Taman Bermain",
+    "kabupaten": "Kota Bandar Lampung",
+    "hargaTiket": 50000,
+    "jamBuka": "08.00-21.00"
+  },
+  {
+    "id": "6",
+    "judul": "Krakatau Park",
+    "kategori": "Taman Bermain",
+    "kabupaten": "Lampung Selatan",
+    "hargaTiket": 100000,
+    "jamBuka": "09.00-17.00"
+  },
+  {
+    "id": "7",
+    "judul": "Lampung Marriott Resort & Spa",
+    "kategori": "Resort",
+    "kabupaten": "Pesawaran",
+    "hargaTiket": 1900000,
+    "jamBuka": "09.00-22.00"
+  },
+  {
+    "id": "8",
+    "judul": "Raden Intan Beach",
+    "kategori": "Pantai",
+    "kabupaten": "Lampung Selatan",
+    "hargaTiket": 15000,
+    "jamBuka": "09.00-18.00"
+  },
+  {
+    "id": "9",
+    "judul": "Lentana",
+    "kategori": "Waterpark",
+    "kabupaten": "Tanggamus",
+    "hargaTiket": 20000,
+    "jamBuka": "09.00-17.00"
+  },
+  {
+    "id": "10",
+    "judul": "Grojogan Sewu",
+    "kategori": "Waterpark",
+    "kabupaten": "Pringsewu",
+    "hargaTiket": 25000,
+    "jamBuka": "08.00-17.00"
   }
+
+
 ]
