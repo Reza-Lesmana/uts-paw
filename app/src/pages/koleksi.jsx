@@ -1,18 +1,15 @@
 
-import 
-Navbar from '../components/navbar'
-import 
-KartuWisata from '../components/kartuwisata'
-import 
-useWisata from '../hooks/usewisata'
-import 
-usePencarian from '../hooks/usepencarian'
+import Navbar from '../components/navbar'
+import KartuWisata from '../components/kartuwisata'
+import useWisata from '../hooks/usewisata'
+import usePencarian from '../hooks/usepencarian'
+import { Link } from 'react-router-dom'
 
 export default function Koleksi() 
 
 
 {
-  const { wisata, loading, error } = useWisata()
+  const { wisata, loading, error, hapusWisata } = useWisata()
 
   const { kataKunci, setKataKunci, hasilPencarian } = usePencarian(wisata)
 
@@ -22,7 +19,7 @@ export default function Koleksi()
 
       <main className="container halaman-koleksi">
         <section className="judul-halaman">
-            
+
           <p className="label-hero">JELAJAHI LAMPUNG YUK</p>
           <h1>Koleksi Wisata</h1>
           <p>Temukan berbagai destinasi menarik di Provinsi Lampung.</p>
@@ -50,13 +47,26 @@ export default function Koleksi()
 
 
             {hasilPencarian.length > 0 ? (
-
-
               hasilPencarian.map((item) => (
+  <div key={item.id}>
+    <KartuWisata item={item} />
 
+    <button
+      className="tombol-hapus"
+      onClick={() => {
+        const yakin = window.confirm(
+          `Apakah kamu yakin ingin menghapus ${item.judul}?`
+        )
 
-                <KartuWisata key={item.id} item={item} />
-              ))
+        if (yakin) {
+          hapusWisata(item.id)
+        }
+      }}
+    >
+      Hapus Wisata
+    </button>
+  </div>
+))
             ) : (
 
 

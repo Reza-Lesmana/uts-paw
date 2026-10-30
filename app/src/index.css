@@ -1,16 +1,313 @@
-:root {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.5;
-  color: #1f2328;
-  background: #f6f7f9;
-}
 
-body {
+* {
   margin: 0;
+  padding: 0;
+
+
+  box-sizing: border-box;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+body 
+{
+  font-family: Arial, sans-serif;
+  background-color: #f5f7f2;
+  color: #333;
+}
+
+a {
+
+  text-decoration: none;
+  color: #276749;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/*bagian navbarnyaaa */
+.navbar {
+  background-color: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #276749;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+/*berandanya disni */
+.hero {
+  background-color: #dcebdc;
+  padding: 60px 40px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tombol-utama,
+.tombol-detail {
+  display: inline-block;
+  background-color: #276749;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/*judul hlmannya */
+.judul-halaman {
+  margin: 40px 0 25px;
+}
+
+.judul-halaman h1 {
+  margin-bottom: 10px;
+}
+
+.label-hero {
+  color: #276749;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Kartu wisata */
+.bagian-wisata {
+  margin: 40px 0;
+}
+
+.judul-bagian {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.grid-wisata 
+
+
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.kartu-wisata 
+
+{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.kartu-wisata h3 
+
+{
+  margin: 10px 0;
+}
+
+.kartu-wisata p {
+  margin-bottom: 10px;
+}
+
+.kartu-kategori {
+  color: #276749;
+  font-weight: bold;
+}
+
+/* Pencarian */
+.pencarian {
+  margin-bottom: 25px;
+}
+
+.pencarian input 
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pencarian p 
+{
+  margin-top: 10px;
+}
+
+/* Form tambah wisata */
+.form-wisata {
+  background-color: white;
+  padding: 25px;
+  max-width: 600px;
+
+  margin-bottom: 40px;
+
+  border-radius: 10px;
+}
+
+.form-wisata label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.form-wisata input 
+
+
+{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-wisata button {
+  margin-top: 20px;
+}
+
+.pesan-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/*detail sii wisata */
+.halaman-detail {
+  margin-top: 40px;
+}
+
+.detail-konten {
+  background-color: white;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.detail-konten h1 {
+  margin: 20px 0;
+}
+
+.detail-informasi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.detail-informasi div {
+  background-color: #edf3e6;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/*statistikny */
+.ringkasan-statistik {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.kartu-statistik {
+  background-color: #dcebdc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.kartu-statistik p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.tabel-statistik {
+  margin: 30px 0;
+}
+
+.tabel-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #dcebdc;
+}
+
+/*tentang */
+.profil-mahasiswa,
+.informasi-proyek {
+  background-color: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.profil-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.informasi-proyek {
+  margin-bottom: 40px;
+}
+
+.informasi-proyek p {
+  line-height: 1.6;
+}
+
+/* Halaman 404 */
+.halaman-404 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid-wisata,
+  .ringkasan-statistik,
+  .detail-informasi {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
 }
