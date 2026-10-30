@@ -1,92 +1,89 @@
-
-# Jelajah Lampung
-
-Website katalog destinasi wisata di Provinsi Lampung. Website ini dibuat untuk memenuhi Ujian Tengah Semester (UTS) mata kuliah Pengembangan Aplikasi Web.
+# TIYUH EXPLORE
 
 ## Identitas Mahasiswa
 
-- **Nama:** Reza Lesmana Julgi
-- **NIM:** 124140115
-- **Kelas:** RA
-- **Tema:** Destinasi Wisata Lampung
+Nama: Reza Lesmana Julgi
 
-## Fitur Website
+NIM: 124140115
 
-1. Menampilkan daftar destinasi wisata Lampung.
-2. Mencari destinasi berdasarkan nama wisata.
-3. Melihat detail informasi destinasi.
-4. Menambahkan destinasi wisata baru.
-5. Menghapus destinasi wisata dengan konfirmasi.
-6. Menampilkan statistik jumlah wisata berdasarkan kategori.
-7. Menampilkan informasi mahasiswa pada halaman Tentang.
-8. Menyimpan data wisata menggunakan localStorage.
+Kelas: RA
+
+Tema: Destinasi Wisata Lampung
+
+## URL Deployment
+
+https://reza-lesmana.github.io/uts-paw/
+
+## Deskripsi Aplikasi
+
+TIYUH EXPLORE merupakan aplikasi web untuk menjelajahi berbagai destinasi wisata yang ada di Provinsi Lampung. Aplikasi ini dibuat menggunakan React sebagai pemenuhan tugas Ujian Tengah Semester Pengembangan Aplikasi Web.
+
+## Fitur Aplikasi
+
+1. Beranda untuk menampilkan rekomendasi wisata.
+2. Koleksi wisata untuk melihat daftar destinasi.
+3. Pencarian wisata berdasarkan judul.
+4. Detail informasi setiap destinasi wisata.
+5. Menambahkan destinasi wisata baru.
+6. Menghapus destinasi wisata dengan konfirmasi.
+7. Statistik jumlah wisata berdasarkan kategori.
+8. Halaman tentang yang menampilkan identitas mahasiswa.
+9. Penyimpanan data menggunakan localStorage.
+10. Halaman 404 untuk rute yang tidak ditemukan.
 
 ## Teknologi yang Digunakan
 
 - React
-- Vite
 - JavaScript
 - React Router
+- HTML
 - CSS
+- Vite
 - Vitest
-- React Testing Library
+- Testing Library
 
-## Konsep React yang Digunakan
-
-- useState dan useEffect
-- Context API
-- Custom Hooks
-- React Router
-- Fetch API dengan async/await
-- Komponen React
-
-## Menjalankan Project Secara Lokal
-
-Pastikan Node.js sudah terpasang.
+## Cara Menjalankan Aplikasi
 
 1. Clone repository:
 
-   ```bash
-   git clone https://github.com/Reza-Lesmana/uts-paw.git
-   ```
+   `git clone https://github.com/Reza-Lesmana/uts-paw.git`
 
 2. Masuk ke folder aplikasi:
 
-   ```bash
-   cd uts-paw/app
-   ```
+   `cd uts-paw/app`
 
 3. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+   `npm install`
 
 4. Jalankan aplikasi:
 
-   ```bash
-   npm run dev
-   ```
+   `npm run dev`
 
 5. Buka alamat lokal yang ditampilkan di terminal.
 
-## Pengujian
+## Tangkapan Layar Aplikasi
 
-Menjalankan pengujian:
+### Beranda
 
-```bash
-npm test
-```
+![Halaman Beranda](./public/images/beranda.png)
 
-Memeriksa build:
+### Koleksi Wisata
 
-```bash
-npm run build
-```
+![Halaman Koleksi Wisata](./public/images/koleksi.png)
 
-## Deployment
+### Detail Wisata
 
-Website direncanakan menggunakan GitHub Pages melalui GitHub Actions.
+![Halaman Detail Wisata](./public/images/detail-wisata.png)
 
-**URL website:**  
-https://reza-lesmana.github.io/uts-paw/
+### Tambah Wisata
+
+![Halaman Tambah Wisata](./public/images/tambah-wisata.png)
+
+### Statistik
+
+![Halaman Statistik](./public/images/statistik.png)
+
+### Tentang
+
+![Halaman Tentang](./public/images/tentang.png)
