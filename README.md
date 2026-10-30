@@ -72,7 +72,12 @@ Kelas: RA
 Tema: Destinasi Wisata Lampung
 Deployment: https://github.com/Reza-Lesmana/uts-paw
 
-# Tangkapan Layar
+
+## Tangkapan Layar Aplikasi
+
+### Beranda
+
+![Halaman Beranda](./app/public/images/beranda.png)
 
 ### Koleksi Wisata
 
@@ -93,7 +98,6 @@ Deployment: https://github.com/Reza-Lesmana/uts-paw
 ### Tentang
 
 ![Halaman Tentang](./app/public/images/tentang.png)
-
 ## Fitur
 
 - Beranda untuk menampilkan rekomendasi wisata.
