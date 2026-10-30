@@ -76,44 +76,35 @@ Deployment: https://github.com/Reza-Lesmana/uts-paw
 
 ### Koleksi Wisata
 
-![Halaman Koleksi Wisata](./public/images/koleksi.png)
+![Halaman Koleksi Wisata](./app/public/images/koleksi.png)
 
 ### Detail Wisata
 
-![Halaman Detail Wisata](./public/images/detail-wisata.png)
+![Halaman Detail Wisata](./app/public/images/detail-wisata.png)
 
 ### Tambah Wisata
 
-![Halaman Tambah Wisata](./public/images/tambah-wisata.png)
+![Halaman Tambah Wisata](./app/public/images/tambah-wisata.png)
 
 ### Statistik
 
-![Halaman Statistik](./public/images/statistik.png)
+![Halaman Statistik](./app/public/images/statistik.png)
 
 ### Tentang
 
-![Halaman Tentang](./public/images/tentang.png)
+![Halaman Tentang](./app/public/images/tentang.png)
 
 ## Fitur
 
 - Beranda untuk menampilkan rekomendasi wisata.
-
 - Koleksi wisata untuk melihat daftar destinasi.
-
 - Pencarian wisata berdasarkan judul.
-
 - Detail informasi setiap destinasi wisata.
-
 - Menambahkan destinasi wisata baru.
-
 - Menghapus destinasi wisata dengan konfirmasi.
-
 - Statistik jumlah wisata berdasarkan kategori.
-
 - Halaman tentang yang menampilkan identitas mahasiswa.
-
 - Penyimpanan data menggunakan localStorage.
-
 - Halaman 404 untuk rute yang tidak ditemukan.
 
 ## Menjalankan secara lokal
