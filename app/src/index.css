@@ -283,13 +283,13 @@ th {
   line-height: 1.6;
 }
 
-/* Halaman 404 */
+/* 404 */
 .halaman-404 {
   text-align: center;
   margin-top: 100px;
 }
 
-/* Tampilan HP */
+/* Tampilan hapee */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -310,4 +310,16 @@ th {
   .hero h1 {
     font-size: 28px;
   }
+
+  .footer {
+  margin-top: 50px;
+  padding: 25px;
+  text-align: center;
+  background-color: #173f35;
+  color: white;
+}
+
+.footer p {
+  margin: 5px;
+}
 }

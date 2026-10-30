@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TIYUH EXPLORE</title>
+    <script>
+      const path = window.location.pathname
+      const base = '/uts-paw/'
+
+      sessionStorage.setItem(
+        'redirect',
+        path.replace(base, '')
+      )
+
+      window.location.replace(base)
+    </script>
+  </head>
+  <body>
+    <p>Mengarahkan kembali...</p>
+  </body>
+</html>

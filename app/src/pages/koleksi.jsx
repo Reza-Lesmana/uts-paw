@@ -26,9 +26,10 @@ export default function Koleksi()
         </section>
 
         <section className="pencarian">
-          <input
+            <input
 
-            type="text"
+            type="search"
+            aria-label="Cari wisata"
             placeholder="Cari nama destinasi wisata..."
             value={kataKunci}
             onChange={(e) => setKataKunci(e.target.value)}

@@ -44,18 +44,22 @@ export default function TambahWisata()
   {
     e.preventDefault()
 
+    if (!form.judul.trim()) {
+      setError('Nama wisata wajib diisi.')
+      return
+    }
+
     if (
-      !form.judul.trim() ||
       !form.kategori.trim() ||
       !form.kabupaten.trim() ||
-      !form.hargaTiket ||
+      form.hargaTiket === '' ||
       !form.jamBuka.trim()
     ) {
       setError('Semua kolom wajib diisi ya.')
       return
     }
 
-    if (Number(form.hargaTiket) < 0) 
+    if (!Number.isFinite(Number(form.hargaTiket)) || Number(form.hargaTiket) < 0) 
         
         {
       setError('Harga tiket gak boleh negatif.')
@@ -96,7 +100,7 @@ export default function TambahWisata()
         </section>
 
         <form className="form-wisata" onSubmit={handleSubmit}>
-          <label htmlFor="judul">Nama Wisata</label>
+          <label htmlFor="judul">Judul</label>
           <input
             id="judul"
             name="judul"
@@ -143,7 +147,7 @@ export default function TambahWisata()
             placeholder="Contoh: 08.00-18.00"
           />
 
-          {error && <p className="pesan-error">{error}</p>}
+          {error && <p className="pesan-error" role="alert">{error}</p>}
 
           <button type="submit" className="tombol-utama">
             Simpan Wisata

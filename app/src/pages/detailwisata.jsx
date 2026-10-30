@@ -1,6 +1,5 @@
-
 import 
-{ Link, useParams 
+{ Link, useParams, useNavigate
 
 } from 'react-router-dom'
 
@@ -14,13 +13,26 @@ export default function DetailWisata()
 {
   const 
   { id } = useParams()
+  const navigate = useNavigate()
+
   const 
-  { wisata, loading, error 
+  { wisata, loading, error, hapusWisata 
 
 
   } = useWisata()
 
   const item = wisata.find((data) => data.id === id)
+
+  function handleHapus() {
+    const yakin = window.confirm(
+      `Apakah kamu yakin ingin menghapus ${item.judul}?`
+    )
+
+    if (yakin) {
+      hapusWisata(item.id)
+      navigate('/koleksi')
+    }
+  }
 
   return (
     <>
@@ -37,10 +49,9 @@ export default function DetailWisata()
 
         {!loading && !error && !item && (
           <section className="pesan-kosong">
-            <h1>Wisata Gak Ketemu</h1>
+            <h1>Wisata Tidak Ditemukan</h1>
 
-
-            <p>Destinasi wisata yang kamu cari ga ada.</p>
+            <p>Destinasi wisata tidak ditemukan.</p>
 
 
             <Link to="/koleksi" className="tombol-utama">
@@ -48,7 +59,7 @@ export default function DetailWisata()
             </Link>
           </section>
         )
-        
+
         }
 
         {!loading && !error && item && (
@@ -63,7 +74,7 @@ export default function DetailWisata()
 
             <div className="detail-informasi">
               <div>
-                <h3>Lokasi</h3>
+                <h3>Kabupaten/Kota</h3>
                 <p>{item.kabupaten}</p>
               </div>
 
@@ -77,14 +88,22 @@ export default function DetailWisata()
                 <p>{item.jamBuka}</p>
               </div>
             </div>
+
+            <button
+              type="button"
+              className="tombol-hapus"
+              onClick={handleHapus}
+            >
+              Hapus Wisata
+            </button>
           </section>
         )
-        
-        
+
+
         }
       </main>
     </>
   )
 
-  
+
 }

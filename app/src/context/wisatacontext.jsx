@@ -28,7 +28,7 @@ export function WisataProvider({ children }) {
         const dataTersimpan = localStorage.getItem('dataWisata')
 
         if (dataTersimpan) 
-            
+
             {
 
 
@@ -37,9 +37,9 @@ export function WisataProvider({ children }) {
         } else 
             {
           const response = await fetch
-          
-          
-          
+
+
+
           (
             `${import.meta.env.BASE_URL}data/koleksi.json`
           )
@@ -48,8 +48,8 @@ export function WisataProvider({ children }) {
           (!response.ok) 
             {
             throw new Error
-            
-            
+
+
             ('Data wisata gagal dimuat')
           }
 
@@ -61,8 +61,8 @@ export function WisataProvider({ children }) {
       } catch (err) 
       {
         setError
-        
-        
+
+
         (err.message)
       } finally {
         setLoading(false)
@@ -80,13 +80,23 @@ export function WisataProvider({ children }) {
   }, [wisata, loading])
 
   function tambahWisata(dataBaru) {
-    setWisata([...wisata, dataBaru])
+    setWisata((wisataSebelumnya) => {
+      const wisataBaru = [...wisataSebelumnya, dataBaru]
+
+      localStorage.setItem('dataWisata', JSON.stringify(wisataBaru))
+
+      return wisataBaru
+    })
   }
 
   function hapusWisata(id) {
-    setWisata(wisata.filter
-        ((item) => item.id !== id)
-    )
+    setWisata((wisataSebelumnya) => {
+      const wisataBaru = wisataSebelumnya.filter((item) => item.id !== id)
+
+      localStorage.setItem('dataWisata', JSON.stringify(wisataBaru))
+
+      return wisataBaru
+    })
   }
 
   return (
@@ -107,9 +117,9 @@ export function WisataProvider({ children }) {
     >
       {children}
 
-      
+
     </WisataContext.Provider>
- 
+
 
 
 )
