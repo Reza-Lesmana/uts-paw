@@ -1,6 +1,7 @@
+
 import 
 
-{ createContext, useEffect, useState } from 'react'
+{ createContext, useEffect, useRef, useState } from 'react'
 
 export const WisataContext = createContext
 
@@ -19,6 +20,8 @@ export function WisataProvider({ children }) {
 
   const [error, setError] = useState('')
 
+  const dataSudahDimuat = useRef(false)
+
   useEffect(() => 
     {
     async function ambilData() {
@@ -27,8 +30,8 @@ export function WisataProvider({ children }) {
       {
         const dataTersimpan = localStorage.getItem('dataWisata')
 
-        if (dataTersimpan) 
-
+        if (dataTersimpan !== null) 
+            
             {
 
 
@@ -37,9 +40,9 @@ export function WisataProvider({ children }) {
         } else 
             {
           const response = await fetch
-
-
-
+          
+          
+          
           (
             `${import.meta.env.BASE_URL}data/koleksi.json`
           )
@@ -48,8 +51,8 @@ export function WisataProvider({ children }) {
           (!response.ok) 
             {
             throw new Error
-
-
+            
+            
             ('Data wisata gagal dimuat')
           }
 
@@ -61,10 +64,11 @@ export function WisataProvider({ children }) {
       } catch (err) 
       {
         setError
-
-
+        
+        
         (err.message)
       } finally {
+        dataSudahDimuat.current = true
         setLoading(false)
       }
     }
@@ -73,30 +77,29 @@ export function WisataProvider({ children }) {
   }, [])
 
   useEffect(() => {
-    if (!loading) {
+    if (dataSudahDimuat.current) {
       localStorage.setItem
       ('dataWisata', JSON.stringify(wisata))
     }
-  }, [wisata, loading])
+  }, [wisata])
 
   function tambahWisata(dataBaru) {
-    setWisata((wisataSebelumnya) => {
-      const wisataBaru = [...wisataSebelumnya, dataBaru]
+    const dataTersimpan = localStorage.getItem('dataWisata')
+    const wisataSaatIni = dataTersimpan
+      ? JSON.parse(dataTersimpan)
+      : wisata
 
-      localStorage.setItem('dataWisata', JSON.stringify(wisataBaru))
+    const wisataBaru = [...wisataSaatIni, dataBaru]
 
-      return wisataBaru
-    })
+    localStorage.setItem('dataWisata', JSON.stringify(wisataBaru))
+    setWisata(wisataBaru)
   }
 
   function hapusWisata(id) {
-    setWisata((wisataSebelumnya) => {
-      const wisataBaru = wisataSebelumnya.filter((item) => item.id !== id)
+    const wisataBaru = wisata.filter((item) => item.id !== id)
 
-      localStorage.setItem('dataWisata', JSON.stringify(wisataBaru))
-
-      return wisataBaru
-    })
+    localStorage.setItem('dataWisata', JSON.stringify(wisataBaru))
+    setWisata(wisataBaru)
   }
 
   return (
@@ -117,9 +120,9 @@ export function WisataProvider({ children }) {
     >
       {children}
 
-
+      
     </WisataContext.Provider>
-
+ 
 
 
 )

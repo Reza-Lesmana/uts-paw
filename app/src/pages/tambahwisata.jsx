@@ -43,19 +43,10 @@ export default function TambahWisata()
   function handleSubmit(e) 
   {
     e.preventDefault()
+    setError('')
 
     if (!form.judul.trim()) {
       setError('Nama wisata wajib diisi.')
-      return
-    }
-
-    if (
-      !form.kategori.trim() ||
-      !form.kabupaten.trim() ||
-      form.hargaTiket === '' ||
-      !form.jamBuka.trim()
-    ) {
-      setError('Semua kolom wajib diisi ya.')
       return
     }
 
@@ -80,7 +71,7 @@ export default function TambahWisata()
       judul: form.judul.trim(),
       kategori: form.kategori.trim(),
       kabupaten: form.kabupaten.trim(),
-      hargaTiket: Number(form.hargaTiket),
+      hargaTiket: form.hargaTiket === '' ? 0 : Number(form.hargaTiket),
       jamBuka: form.jamBuka.trim()
     }
 
