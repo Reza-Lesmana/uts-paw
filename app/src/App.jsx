@@ -38,22 +38,29 @@ export default function App()
 {
   return (
     <WisataProvider>
-      <Routes>
-        <Route path="/" element={<Beranda />} />
+      <>
+        <Routes>
+          <Route path="/" element={<Beranda />} />
 
 
-        <Route path="/koleksi" element={<Koleksi />} />
+          <Route path="/koleksi" element={<Koleksi />} />
 
-        <Route path="/koleksi/:id" element={<DetailWisata />}
-         />
-        <Route path="/tambah" element={<TambahWisata />} />
+          <Route path="/koleksi/:id" element={<DetailWisata />}
+           />
+          <Route path="/tambah" element={<TambahWisata />} />
 
-        <Route path="/statistik" element={<Statistiknya />} />
-        
-        <Route path="/tentang" element={<Tentang />} />
-        
-        <Route path="*" element={<TidakDitemukan />} />
-      </Routes>
+          <Route path="/statistik" element={<Statistiknya />} />
+          
+          <Route path="/tentang" element={<Tentang />} />
+          
+          <Route path="*" element={<TidakDitemukan />} />
+        </Routes>
+
+        <footer className="footer">
+          <p>© 2026 TIYUH EXPLORE</p>
+          <p>Website destinasi wisata Provinsi Lampung</p>
+        </footer>
+      </>
     </WisataProvider>
   )
 }
