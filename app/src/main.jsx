@@ -5,21 +5,21 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 
-// Router sengaja diletakkan di sini, bukan di App.jsx, agar uji otomatis
-// dosen bisa merender <App /> di dalam MemoryRouter.
+// Mengambil alamat halaman yang disimpan oleh 404.html
+const redirect = sessionStorage.getItem('redirect')
 
-// Mengembalikan pengguna ke halaman yang dibuka sebelum redirect 404.
-const halamanTujuan = sessionStorage.getItem('redirect')
-
-if (halamanTujuan) {
+if (redirect) {
   sessionStorage.removeItem('redirect')
+
   window.history.replaceState(
     null,
     '',
-    `${import.meta.env.BASE_URL}${halamanTujuan}`
+    `${import.meta.env.BASE_URL}${redirect}`
   )
 }
 
+// Router sengaja diletakkan di sini, bukan di App.jsx, agar uji otomatis
+// dosen bisa merender <App /> di dalam MemoryRouter.
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
