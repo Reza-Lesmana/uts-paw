@@ -64,18 +64,57 @@ Ganti seluruh isi berkas ini dengan dokumentasi aplikasimu (butir rubrik A4). Ke
 
 ```markdown
 # Nama Aplikasi
+TIYUH EXPLORE
 
-Nama: ...
-NIM: ...
-Kelas: ...
-Tema: ...
-Deployment: https://USERNAME.github.io/uts-paw/
+Nama: Reza Lesmana Julgi
+NIM: 124140115
+Kelas: RA
+Tema: Destinasi Wisata Lampung
+Deployment: https://github.com/Reza-Lesmana/uts-paw
 
-![Tangkapan layar beranda](docs/beranda.png)
+# Tangkapan Layar
+
+### Koleksi Wisata
+
+![Halaman Koleksi Wisata](./public/images/koleksi.png)
+
+### Detail Wisata
+
+![Halaman Detail Wisata](./public/images/detail-wisata.png)
+
+### Tambah Wisata
+
+![Halaman Tambah Wisata](./public/images/tambah-wisata.png)
+
+### Statistik
+
+![Halaman Statistik](./public/images/statistik.png)
+
+### Tentang
+
+![Halaman Tentang](./public/images/tentang.png)
 
 ## Fitur
 
-- ...
+- Beranda untuk menampilkan rekomendasi wisata.
+
+- Koleksi wisata untuk melihat daftar destinasi.
+
+- Pencarian wisata berdasarkan judul.
+
+- Detail informasi setiap destinasi wisata.
+
+- Menambahkan destinasi wisata baru.
+
+- Menghapus destinasi wisata dengan konfirmasi.
+
+- Statistik jumlah wisata berdasarkan kategori.
+
+- Halaman tentang yang menampilkan identitas mahasiswa.
+
+- Penyimpanan data menggunakan localStorage.
+
+- Halaman 404 untuk rute yang tidak ditemukan.
 
 ## Menjalankan secara lokal
 
@@ -85,5 +124,12 @@ npm run dev
 
 ## Konsep React yang dipakai
 
-- ...
-```
+## Konsep React yang Digunakan
+
+1. **Functional Components:** Membagi aplikasi menjadi komponen-komponen yang dapat digunakan kembali.
+2. **useState:** Mengelola state seperti data wisata, loading, error, dan kata kunci pencarian.
+3. **useEffect:** Menjalankan efek samping, seperti mengambil data awal dan menyimpan perubahan ke Local Storage.
+4. **Context API:** Mengelola dan membagikan data wisata menggunakan createContext, Provider, dan useContext.
+5. **Custom Hooks:** Memisahkan logika pengelolaan wisata melalui useWisata dan logika pencarian melalui usePencarian.
+6. **React Router:** Mengatur navigasi antarhalaman menggunakan BrowserRouter, Routes, Route, Link, dan useNavigate.
+7. **Conditional Rendering dan List Rendering:** Menampilkan halaman berdasarkan kondisi serta menampilkan daftar wisata menggunakan map().
